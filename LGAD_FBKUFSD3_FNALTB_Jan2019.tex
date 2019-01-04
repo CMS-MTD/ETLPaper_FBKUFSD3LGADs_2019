@@ -1,0 +1,293 @@
+%% 
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+
+\documentclass[preprint,1p]{elsarticle}
+\biboptions{numbers,sort&compress}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{wasysym}
+%\usepackage[percent]{overpic}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage{cleveref}
+
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Nucl. Instrum. Meth. A}
+
+\begin{document}
+
+\linenumbers
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Studies of FBK UFSD3 low-gain avalanche detectors}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \address[label1]{}
+%% \address[label2]{}
+
+\author[1]{A.~Apresyan\corref{cor}}\ead{apresyan@fnal.gov}
+\author[5,7]{R.~Arcidiacono}
+\author[5]{N.~Cartiglia}
+\author[8]{M.~Carulla}
+\author[2]{O.~Cerri}
+\author[1]{G.~Derylo}
+\author[5]{M.~Ferrero}
+\author[8]{D.~Flores}
+\author[9]{A.~Ghassemi}
+\author[3]{H.~Al Ghoul}
+\author[1]{R.~Heller}
+\author[8]{S.~Hidalgo}
+\author[1]{M.~Hussain}
+\author[9]{S.~Kamada}
+\author[1]{S.~Los}
+\author[5]{M.~Mandurrino}
+\author[8]{A.~Merlos}
+\author[3]{N.~Minafra}
+\author[4]{A.~Ocharova}
+\author[8]{G.~Pellegrini}
+\author[1,2]{C.~Pena}
+\author[8]{D.~Quirion}
+\author[3]{C.~Royon}
+\author[5]{V.~Sola}
+\author[2]{M.~Spiropulu}
+\author[5]{A.~Staiano}
+\author[1]{L.~Uplegger}
+\author[2]{S.~Xie}
+
+\address[1]{Fermi National Accelerator Laboratory, Batavia, IL, USA}
+\address[2]{California Institute of Technology, Pasadena, CA, USA}
+\address[3]{University of Kansas, KS, USA}
+\address[4]{University of California Santa Barabara, CA, USA}
+\address[5]{INFN, Torino, Italy}
+\address[6]{Universit\`a di Torino, Torino, Italy}
+\address[7]{Universit\`a del Piemonte Orientale, Italy}
+\address[8]{Centro Nacional de Microelectr\'{o}nica (IMB-CNM-CSIC), Barcelona, Spain}
+\cortext[cor]{Corresponding author}
+
+\begin{abstract}
+%% Text of abstract
+abstract
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+Silicon \sep Timing \sep LGAD \sep Test Beam
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+\tableofcontents
+
+%% \linenumbers
+
+%% main text
+\section{Introduction} 
+
+
+The paper is organized as follows: the experimental setup and data analysis
+procedures are described in Sec.~\ref{sec:setup}; the tested LGAD sensors and
+their operating conditions are discussed in Sec.~\ref{sec:sensors}; 
+studies of sensor irradiation tolerance are presented in 
+Sec.~\ref{sec:irradiationStudies}; studies of large area sensors are presented 
+in Sec.~\ref{sec:largeAreaStudies}; and the conclusion is given in Sec.~\ref{sec:conclusion}.
+
+\section{Experimental Setup and Data Analysis} 
+\label{sec:setup}
+
+%FTBF facility
+%Readout electronics%
+%Brief description of analysis selection and reconstruction algorithms
+
+
+
+\section{LGAD Sensors}
+\label{sec:sensors}
+
+% Describe UFSD3 and UFSD2 sensor productions
+% What's new with respect to previous productions? 
+% expected features?
+
+
+
+\section{Sensor radiation tolerance}
+\label{sec:irradiationStudies}
+
+% UFSD3 W5 - small sensors (1x3mm^2)
+%   amplitude & time resolution vs irradiation
+%   amplitude & time resolution vs BV
+%   amplitude/time mean/time resolution vs position uniformity - 2D and 1D
+
+\section{Uniformity of large area sensors}
+\label{sec:largeAreaStudies}
+
+% UFSD2 2x8 16-CH sensor - 
+%   amplitude (& efficiency if we can get near 100%) vs position
+%   time mean vs position - if we can take more data of this with Photek
+%   Measurement of pixel gaps?
+
+ 
+\section{Conclusion}
+\label{sec:conclusion} 
+
+
+\section*{Acknowledgment}
+
+We thank the FTBF personnel and Fermilab accelerator's team for very good beam
+conditions during our test beam time. We also appreciate the technical support
+of the Fermilab SiDet department for the rapid production of wire-bonded and
+packaged LGAD assemblies. We would like to thank Alan Prosser and Ryan Rivera
+for their critical help in setting up the DAQ and trigger chain. We thank Ned
+Spencer, Max Wilder, and Forest McKinney-Martinez for their technical
+assistance, and the CNM and HPK manufacturing team. We acknowledge the help of
+V. Cindro and I. Mandic with the neutron irradiations. 
+
+This document was prepared using the resources of the Fermi National Accelerator
+Laboratory (Fermilab), a U.S. Department of Energy, Office of Science, HEP User
+Facility. Fermilab is managed by Fermi Research Alliance, LLC (FRA), acting
+under Contract No. DE-AC02-07CH11359. Part of this work was performed within the
+framework of the CERN RD50 collaboration.
+
+This work was supported by the Fermilab LDRD 2017.027; by the United States
+Department of Energy grant DE-FG02-04ER41286; by the California Institute of
+Technology High Energy Physics under Contract DE-SC0011925; by the European
+Union's Horizon 2020 Research and Innovation funding program, under Grant
+Agreement no. 654168 (AIDA-2020) and Grant Agreement no. 669529 (ERC
+UFSD669529); by the Italian Ministero degli Affari Esteri and INFN Gruppo V; and
+by the Spanish Ministry of Economy, Industry and Competitiveness through the
+Particle Physics National Program (ref. FPA2014-55295-C3-2-R and
+FPA2015-69260-C3-3-R) co-financed with FEDER funds.
+
+
+% The Appendices part is started with the command \appendix;
+% appendix sections are then done as normal sections
+
+%\appendix
+%\section{Appendix A}
+
+
+
+% \section{}
+% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+%%  \bibliographystyle{elsarticle-num} 
+%%  \bibliography{<your bibdatabase>}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+\bibliography{LGAD_May2017_FNALTB}{}
+\bibliographystyle{ieeetr} 
+
+%\begin{thebibliography}{00}
+
+%% \bibitem{label}
+%% Text of bibliographic item
+
+%\bibitem{}
+
+%\end{thebibliography}
+\end{document}
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
