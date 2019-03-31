@@ -45,6 +45,7 @@
 \usepackage{siunitx}
 \usepackage{multirow}
 \usepackage{wasysym}
+\usepackage{xcolor}
 %\usepackage[percent]{overpic}
 %\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 %\usepackage{cleveref}
@@ -156,45 +157,50 @@ Silicon \sep Timing \sep LGAD \sep Test Beam
 \section{Introduction} 
 
 Future colliders, including the high luminosity upgrade of the Large Hadron
-Collider (HL-LHC) at CERN, will operate with instantaneous luminosity an order of magnitude higher than what has been achieved at the
-Large Hadron Collider (LHC) so far.
-With the increased instantaneous luminosity, the rate of simultaneous
-interactions per bunch crossing (pileup) is projected to reach an average of 140
-to 200. The large amount of pileup exacerbates the difficulties in separating 
-particles from the hard scattering interaction with those
-produced in pileup interactions. In particular, the ability to discriminate between
-jets produced in the events of interests, especially those associated with vector 
-boson fusion processes, and jets produced by pileup interactions will be
-degraded. Additionally, the efficiency to identify high $p_{\mathrm{T}}$ isolated electrons
-and muons will be severely reduced due to the high density of pileup particles
-in their vicinity. The missing transverse energy resolution will also deteriorate, and several
-other physics objects performance metrics will also suffer the
-detrimental effects of pileup.
+Collider (HL-LHC) at CERN, will operate with instantaneous luminosities higher
+than what has been achieved at the Large Hadron Collider (LHC) so far. With the
+increased instantaneous luminosity, the rate of simultaneous interactions per
+bunch crossing (pileup) is projected to reach approximately 200 at the
+HL-LHC~\cite{Apollinari:2120673}, and up to 1,200 at the
+FCC-hh~\cite{Schulte:2017qkc}. The large amount of pileup exacerbates the
+difficulties in separating particles thar originate from the hard scatter from
+those produced in pileup interactions. In particular, the ability to
+discriminate between jets produced in the events of interests and those produced
+by pileup interactions will be degraded. Additionally, the efficiency to
+identify high $p_{\mathrm{T}}$ isolated electrons and muons will be severely
+reduced due to the high density of pileup particles in their vicinity. The
+missing transverse energy resolution will also deteriorate, and several other
+physics objects performance metrics will also suffer the detrimental effects of
+pileup.
 
 
 One way to mitigate the pileup effects mentioned above, complementary to
-precision tracking methods, is to measure a time of arrival 
-associated with each particle. Such a measurement with a precision of about
-30-40~\si{ps}, will reduce the effective amount of pileup by a factor of 10,
-given that the spread in collision time of the pileup interactions at HL-LHC is
-foreseen to be approximately 200~\si{ps}. It has been previously shown that a
-precision of better than $20$~\si{ps} can be achieved for electromagnetic
-showers measured with silicon sampling
+precision tracking methods, is to measure a time of arrival associated with each
+particle. Such a measurement with a precision of about 30-40~\si{ps}, will
+reduce the effective amount of pileup at the HL-LHC by a factor of 10, given
+that the spread in collision time of the pileup interactions  is foreseen to be
+approximately 200~\si{ps}. It has been previously shown that a precision of
+better than $20$~\si{ps} can be achieved for electromagnetic showers measured
+with silicon sampling
 calorimeters~\cite{Apresyan201662,Apresyan2017_NSSMIC,AKCHURIN201731} using
 traditional planar silicon detectors. In this paper, we report results of
 particle beam measurements with thin low-gain avalanche detectors (LGAD) that
 have been shown to achieve time resolutions around
-30~\si{ps}~\cite{Cartiglia201783, PELLEGRINI201412}. LGAD are envisioned to be
+30~\si{ps}~\cite{Cartiglia201783, PELLEGRINI201412}. LGAD sensors are envisioned to be
 used in the CMS and ATLAS experiment upgrades for HL-LHC in order to overcome
 the event reconstruction challenges posed by the high rate of concurrent
 collisions per beam crossing. The implemented regions of pseudorapidity ($\eta$)
-are: $1.6 < |\eta| < 2.9$, and $2.4 < |\eta| < 4.2 $ for CMS and ATLAS, respectively. In
-order to achieve the desired timing precision over the entire surface area of the
-detectors, the sensors will need to provide high uniformity of signal response. In this paper, we perform detailed measurements of the
-performance of LGAD sensors produced by Fondazione Bruno Kessler exposed to the 120~GeV proton beam at
-Fermilab. Utilizing high-precision tracking detectors we extract position
-dependence of the charged-particle detection efficiency, signal pulse height,
-signal timestamp, and time resolution of 50~$\mu$m LGAD sensors. We also study the time resolution of FBK sensors irradiated to an equivalent neutron fluence of $1.5\times 10^{15}$~n/cm$^2$. Detailed measurements of irradiated HPK sensors were presented in Ref.~\cite{Galloway:2017gfx}.
+are: $1.6 < |\eta| < 2.9$, and $2.4 < |\eta| < 4.2 $ for CMS and ATLAS,
+respectively. In order to achieve the desired timing precision over the entire
+surface area of the detectors, LGAD sensors will need to provide high uniformity
+of signal response. In this paper, we perform detailed measurements of the
+performance of sensors produced by Fondazione Bruno Kessler exposed to the
+120~GeV proton beam at Fermilab. Utilizing high-precision tracking detectors we
+extract position dependence of the charged-particle detection efficiency, signal
+pulse height, signal timestamp, and time resolution of 50~$\mu$m LGAD sensors.
+We also study the time resolution of FBK sensors irradiated to an equivalent
+neutron fluence of $1.5\times 10^{15}$~n/cm$^2$ {\color{red} Ryan: is it only 1.5e15, or up to?}. Detailed measurements of
+irradiated HPK sensors were presented in Ref.~\cite{Galloway:2017gfx}.
 
 The paper is organized as follows: the tested LGAD sensors and
 their operating conditions are discussed in Sec.~\ref{sec:sensors};
@@ -213,9 +219,9 @@ in Sec.~\ref{sec:largeAreaStudies}; and the conclusion is given in Sec.~\ref{sec
 % expected features?
 
 Sensors from two recent FBK productions were studied in this test beam. The latest production, Ultra-Fast Silicon Detectors 3 (UFSD3) features an innovative technique: the addition of carbon doping, which is expected to mitigate radiation damage to the gain layer and extend the life of the sensors.
-This test beam focused on carbonated sensors in 1x2 arrays of 1x3mm pads, prepared with irradiations of \num{5e14}~neq and \num{1.5e15}~neq. The performance of the irradiated sensors is compared with that of their unirradiated counterpart to evaluate the effectiveness of the carbon dose for improving the radiation hardness.
+This test beam focused on carbonated sensors in 1$\times$2 arrays of 1$\times$3~mm$^2$ pads, prepared with irradiations of \num{5e14}~n$_{\mathrm{eq}}$/cm$^2$ and \num{1.5e15}~n$_{\mathrm{eq}}$/cm$^2$. The performance of the irradiated sensors is compared with that of their unirradiated counterpart to evaluate the effectiveness of the carbon doping for improving the radiation hardness.
 
-Additionally, the development of a 16-channel LGAD readout board at Fermilab has facilitated the systematic study of larger arrays in a test beam for the first time. Demonstrating the feasibility of producing large sensors with highly uniform signals is a critical step towards building a large area detector with good timing performance. In this test beam, a 2x8 array of 2x2~mm$^{2}$ pads from UFSD2, the previous FBK LGAD production, was studied and evaluated for uniformity. Photos of the 2x8 array and the 16-channel readout board can be seen in Fig.~\ref{fig:array_photo}.
+Additionally, the development of a 16-channel LGAD readout board at Fermilab has facilitated the systematic study of larger arrays in a test beam for the first time. Demonstrating the feasibility of producing large sensors with highly uniform signals is an important step towards building a large area detector with good timing performance. In this test beam, a 2$\times$8 array of 2$\times$2~mm$^{2}$ pads from UFSD2, the previous FBK LGAD production, was studied and evaluated for uniformity. Photos of the 2$\times$8 array and the 16-channel readout board can be seen in Fig.~\ref{fig:array_photo}.
 
 
 \begin{figure}[htp] 
@@ -240,7 +246,7 @@ which provided a $120$~GeV proton beam from the Fermilab Main Injector
 accelerator. 
 
 The Devices Under Test (DUTs) were mounted on a remotely operated
-motorized stage inside a cold, dry, and dark box. The cold box was placed behind the FTBF pixel telescope detector~\cite{KWAN2016162}, which provides better than 10~$\mu$m position resolution for charged
+motorized stage inside a cold, dry, and dark box. The cold box was placed behind the FTBF pixel telescope detector~\cite{KWAN2016162}, which provides better than 10~$\mu$m position resolution {\color{red} Ryan are we going to quote 10 um or some other number?} for charged
 particles impinging on the DUT. Additionally, a Photek~240 micro-channel plate
 (MCP-PMT) detector~\cite{Anderson:2015gha, MCPFastCaloNIMA,
 Ronzhin2015288,Ronzhin201552} was placed inside the cold box, next to the LGADs and provided a very precise reference timestamp. Its precision has been previously 
@@ -248,8 +254,8 @@ measured to be less than $7$~ps~\cite{Ronzhin2015288}. A schematic diagram and
 photograph of the experimental area are shown in Fig.~\ref{fig:DragonBoxDiagram}
 and Fig.~\ref{fig:DragonBox}, respectively. 
 
-Two DAQ systems are used to acquire signals from the DUTs. For precise time resolution measurements, a \SI{2.5}{\giga\Hz} 4-channel Tektronix scope is used with 14-bit resolution and a sampling rate of 10 GS/s.
-For many-channel measurements, a 32-channel CAEN V1742 digitizer board~\cite{CAENDRS} is used, which provides digitized waveforms sampled at 5 GS/s, with one ADC count corresponding to approximately 0.5~mV. The CAEN digitizer was
+Two DAQ systems are used to acquire signals from the DUTs. For precise time resolution measurements, a \SI{2.5}{\giga\Hz} 4-channel Tektronix scope is used with 8-bit resolution and a sampling rate of 10 GS/s.
+For measurements of devices with multiple channels, a 32-channel CAEN V1742 digitizer board~\cite{CAENDRS} is used, which provides digitized waveforms sampled at 5 GS/s, with one ADC count corresponding to approximately 0.5~mV. The CAEN digitizer was
 voltage- and time-calibrated using the procedure described in
 Ref.~\cite{Kim201467}. One of the main parameters of DAQ system for precise time
 measurements is the ``electronic time resolution'', defined as the measured time
@@ -259,8 +265,8 @@ measuring the time interval between them. The electronic time resolution of the
 CAEN V1742 digitizer was measured to be less than 4~ps, and thus, its impact on
 the timing measurements presented in these studies can be neglected. The DAQ for
 the pixel telescope is based on the CAPTAN system developed at
-Fermilab~\cite{KWAN2016162}. The track-reconstruction is performed using the
-Monicelli software package developed specifically for the test-beam application. 
+Fermilab. The track-reconstruction is performed using the
+Monicelli software package developed specifically for the test-beam application~\cite{KWAN2016162}. 
 
 \begin{figure}[htbp] 
 \centering
@@ -302,7 +308,7 @@ Ref.~\cite{Cartiglia201783}. This board uses discrete components and contains
 several features which allow for maintaining a wide bandwidth ($\sim$ 2 GHz) and a
 low noise even in noisy environments. The inverting amplifier uses a high-speed
 SiGe transistor which has a transimpedance of about 470~$\Omega$. A commercial
-inverting amplifier with gain 10x is used to boost the signal. The total transimpedance is 10.7.
+inverting amplifier with gain $\times$10 is used to boost the signal. The total transimpedance is 10.7.
 k$\Omega$.
 
 The 16-channel FNAL board is designed to test sensors up to 27~mm
@@ -310,7 +316,7 @@ by 15~mm at voltages up to 1~kV. Sixteen wire-bonding pads allow for signal read
 
 \section{Sensor radiation tolerance}
 \label{sec:irradiationStudies}
-
+{\color{red} No comment?}
 % UFSD3 W5 - small sensors (1x3mm^2)
 %   amplitude & time resolution vs irradiation
 %   amplitude & time resolution vs BV
